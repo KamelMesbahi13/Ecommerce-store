@@ -36,14 +36,14 @@ const Navbar = () => {
               </div>
               <div className="flex items-center">
                 <div className="flex items-center cursor-pointer">
-                  <i className="text-2xl">
+                  <i className="text-2xl text-hoverColor">
                     <IoMdPerson />
                   </i>
                   <p className="ml-2">Login</p>
                 </div>
 
                 <div className="flex items-center cursor-pointer">
-                  <i className="text-2xl ml-4">
+                  <i className="ml-4 text-2xl text-hoverColor">
                     <FaShoppingCart />
                   </i>
                   <p className="ml-2">Cart</p>
@@ -94,7 +94,7 @@ const Navbar = () => {
                   <i className="text-2xl">
                     <IoMdPerson />
                   </i>
-                  <i className="text-2xl ml-4">
+                  <i className="ml-4 text-2xl">
                     <FaShoppingCart />
                   </i>
                 </div>
