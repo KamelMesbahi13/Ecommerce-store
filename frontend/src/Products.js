@@ -70,7 +70,7 @@ const product = [
   },
 
   {
-    _id: "5",
+    _id: "6",
     name: "Amazon Echo Dot 3rd Generation",
     image: "./../public/images/alexa.jpg",
     description:
