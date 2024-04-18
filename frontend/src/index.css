@@ -52,3 +52,26 @@
   transform-origin: left;
   transform: scaleX(1);
 }
+
+@layer components {
+  body {
+    @apply text-textColor;
+  }
+
+  p,
+  a {
+    @apply text-sm md:text-base;
+  }
+
+  h1 {
+    @apply text-3xl font-semibold capitalize md:font-bold md:text-4xl;
+  }
+
+  h2 {
+    @apply text-xl font-semibold capitalize md:font-bold md:text-2xl;
+  }
+
+  h6 {
+    @apply mb-2 text-xl font-bold md:text-2xl;
+  }
+}
