@@ -24,17 +24,30 @@ const Navbar = () => {
                 </a>
               </div>
               <div className="flex gap-8">
-                <a href="/">test</a>
-                <a href="/">test</a>
-                <a href="/">test</a>
+                <a className="link" href="/">
+                  test
+                </a>
+                <a className="link" href="/">
+                  test
+                </a>
+                <a className="link" href="/">
+                  test
+                </a>
               </div>
               <div className="flex items-center">
-                <i className="w-20">
-                  <IoMdPerson />
-                </i>
-                <i className="w-2">
-                  <FaShoppingCart />
-                </i>
+                <div className="flex items-center cursor-pointer">
+                  <i className="text-2xl">
+                    <IoMdPerson />
+                  </i>
+                  <p className="ml-2">Login</p>
+                </div>
+
+                <div className="flex items-center cursor-pointer">
+                  <i className="text-2xl ml-4">
+                    <FaShoppingCart />
+                  </i>
+                  <p className="ml-2">Cart</p>
+                </div>
               </div>
             </div>
           </div>
@@ -76,6 +89,14 @@ const Navbar = () => {
                     src={Logo}
                     alt="Logo"
                   />
+                </div>
+                <div className="flex items-center justify-center">
+                  <i className="text-2xl">
+                    <IoMdPerson />
+                  </i>
+                  <i className="text-2xl ml-4">
+                    <FaShoppingCart />
+                  </i>
                 </div>
               </div>
             </div>

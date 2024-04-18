@@ -2,9 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --textColor: #252525;
+  --main: #4f3a6b;
+  --hoverColor: #4f3a6b8a;
+  --grey: #eee;
+}
+
 .container {
   padding-left: 2rem;
   padding-right: 2rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.textCenter {
+  text-align: center;
+  text-align: -moz-center;
+  text-align: -webkit-center;
+}
+
+.textRight {
+  text-align: right;
+  text-align: -moz-right;
+  text-align: -webkit-right;
+}
+
+.link {
+  color: var(--textColor);
+  position: relative;
+  text-decoration: none;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--main);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
