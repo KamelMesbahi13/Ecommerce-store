@@ -74,8 +74,8 @@ const Navbar = () => {
             <div
               className={
                 nav
-                  ? "absolute w-full rtl:left-[150%] opacity-0 ltr:left-[-150%] duration-500 z-50"
-                  : "absolute w-full left-0 bg-grey opacity-100 shadow-2xl z-50 duration-500"
+                  ? "absolute w-full rtl:left-[150%] opacity-0 ltr:left-[-150%] duration-500 z-50 md:-z-10"
+                  : "absolute w-full left-0 bg-grey opacity-100 shadow-2xl z-50 duration-500 md:-z-10"
               }
             >
               <div className="flex flex-col px-8 py-16 gap-y-8">
