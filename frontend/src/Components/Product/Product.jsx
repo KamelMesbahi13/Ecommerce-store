@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 const Product = ({ products }) => {
   return (
-    <div className="p-4 border lg:h-[20rem] shadow-md border-grey">
+    <div className="p-4 border md:h-[23rem] lg:h-[20rem] shadow-md border-grey">
       <div>
         <a href={`/product/${products._id}`}>
           <img src={products.image} alt={products.name} />
