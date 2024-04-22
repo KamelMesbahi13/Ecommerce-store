@@ -19,12 +19,12 @@ const ProductScreen = () => {
             <div className="flex flex-col justify-between md:flex-row">
               <div>
                 <img
-                  className="w-[25rem]"
+                  className="w-[60rem]"
                   src={product.image}
                   alt={product.name}
                 />
               </div>
-              <div className="ml-4">
+              <div className="mb-8 md:mb-0 md:ml-4">
                 <div className="mt-4 md:w-3/4">
                   <h1>{product.name}</h1>
                 </div>
@@ -34,14 +34,14 @@ const ProductScreen = () => {
                     text={`${product.numReviews} Review`}
                   />
                 </div>
-                <div className="mb-8">
+                <div className="mb-4">
                   <h6 className="italic">Price: {product.price}</h6>
                 </div>
                 <div className="md:w-3/4">
                   <p>{product.description}</p>
                 </div>
               </div>
-              <div className="border md:shadow-lg md:px-6 md:py-6 border-grey h-fit">
+              <div className="px-6 py-6 border shadow-lg border-grey h-fit">
                 <div className="flex items-center">
                   <h6 className="mr-4 md:mr-12">Price:</h6>
                   <h6 className="italic">${product.price}</h6>
