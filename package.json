@@ -4,8 +4,9 @@
   "description": "Ecommerce Application With MERN Stack",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node backend/server.js"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KamelMesbahi13/Ecommerce-store.git"
