@@ -1,0 +1,19 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "Ecommerce Application With MERN Stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KamelMesbahi13/Ecommerce-store.git"
+  },
+  "author": "Kamel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KamelMesbahi13/Ecommerce-store/issues"
+  },
+  "homepage": "https://github.com/KamelMesbahi13/Ecommerce-store#readme"
+}
