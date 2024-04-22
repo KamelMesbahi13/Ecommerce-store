@@ -4,6 +4,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { FaXmark } from "react-icons/fa6";
 import { IoMdPerson } from "react-icons/io";
 import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(true);
@@ -19,20 +20,20 @@ const Navbar = () => {
           <div className="z-50 hidden w-full py-6 lg:flex">
             <div className="flex items-center justify-between w-full">
               <div>
-                <a href="/">
+                <Link to="/">
                   <img className="w-28" src={Logo} alt="Logo" />
-                </a>
+                </Link>
               </div>
               <div className="flex gap-8">
-                <a className="link" href="/">
+                <Link to="/" className="link">
                   test
-                </a>
-                <a className="link" href="/">
+                </Link>
+                <Link to="/" className="link">
                   test
-                </a>
-                <a className="link" href="/">
+                </Link>
+                <Link to="/" className="link">
                   test
-                </a>
+                </Link>
               </div>
               <div className="flex items-center">
                 <div className="flex items-center cursor-pointer">
@@ -79,9 +80,9 @@ const Navbar = () => {
               }
             >
               <div className="flex flex-col px-8 py-16 gap-y-8">
-                <a href="/">test</a>
-                <a href="/">test</a>
-                <a href="/">test</a>
+                <Link to="/">test</Link>
+                <Link to="/">test</Link>
+                <Link to="/">test</Link>
 
                 <div className="mx-auto mt-2 lg:hidden">
                   <img
