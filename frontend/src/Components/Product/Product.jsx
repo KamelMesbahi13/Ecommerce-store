@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import Rating from "../Rating/Rating";
 
 const Product = ({ products }) => {
   return (
@@ -13,6 +14,12 @@ const Product = ({ products }) => {
         <Link to={`/product/${products._id}`}>
           <h3 className="mt-4 mb-2 font-bold">{products.name}</h3>
         </Link>{" "}
+        <div>
+          <Rating
+            value={products.rating}
+            text={`${products.numReviews} reviews`}
+          />
+        </div>
         <div className="italic font-bold">${products.price}</div>
       </div>
     </div>
@@ -25,6 +32,8 @@ Product.propTypes = {
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
+    numReviews: PropTypes.number.isRequired,
+    rating: PropTypes.string.isRequired,
   }).isRequired,
 };
 

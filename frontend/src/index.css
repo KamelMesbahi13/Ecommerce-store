@@ -53,6 +53,19 @@
   transform: scaleX(1);
 }
 
+.rating span {
+  margin: 0.1rem;
+}
+
+.rating svg {
+  color: #f8e825;
+}
+
+.rating-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
 @layer components {
   body {
     @apply text-textColor;
