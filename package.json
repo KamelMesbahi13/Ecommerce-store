@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/KamelMesbahi13/Ecommerce-store/issues"
   },
-  "homepage": "https://github.com/KamelMesbahi13/Ecommerce-store#readme"
+  "homepage": "https://github.com/KamelMesbahi13/Ecommerce-store#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
