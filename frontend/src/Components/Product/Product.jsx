@@ -4,7 +4,7 @@ import Rating from "../Rating/Rating";
 
 const Product = ({ products }) => {
   return (
-    <div className="p-4 border md:h-[23rem] lg:h-[20rem] shadow-md border-grey">
+    <div className="p-4 border md:h-[23rem] lg:h-[21rem] shadow-md border-grey">
       <div>
         <Link to={`/product/${products._id}`}>
           <img src={products.image} alt={products.name} />
@@ -33,7 +33,7 @@ Product.propTypes = {
     name: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
     numReviews: PropTypes.number.isRequired,
-    rating: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
   }).isRequired,
 };
 
