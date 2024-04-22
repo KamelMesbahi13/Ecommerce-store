@@ -1,4 +1,4 @@
-const product = [
+const products = [
   {
     _id: "1",
     name: "Airpods Wireless Bluetooth Headphones",
@@ -84,4 +84,4 @@ const product = [
   },
 ];
 
-export default product;
+export default products;
