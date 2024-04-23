@@ -9,12 +9,6 @@ const port = process.env.PORT || 8000;
 const app = express();
 app.use(cors());
 
-app.use(
-  cors({
-    origin: "*",
-  })
-);
-
 app.get("/", (req, res) => {
   res.send("Api Is Coming..");
 });
