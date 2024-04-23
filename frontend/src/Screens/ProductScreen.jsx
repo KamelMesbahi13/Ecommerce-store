@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-// import Products from "../Products";
 import Rating from "../Components/Rating/Rating";
 import axios from "axios";
 
@@ -42,7 +41,7 @@ const ProductScreen = () => {
                 </div>
                 <div className="py-2 my-4">
                   <Rating
-                    value={product.rating}
+                    value={product.rating || 0}
                     text={`${product.numReviews} Review`}
                   />
                 </div>
