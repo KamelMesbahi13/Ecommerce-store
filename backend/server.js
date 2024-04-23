@@ -1,11 +1,19 @@
 import express from "express";
 import products from "./Data/Products.js";
 import dotenv from "dotenv";
+import cors from "cors";
 
 dotenv.config();
 
 const port = process.env.PORT || 8000;
 const app = express();
+app.use(cors());
+
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 app.get("/", (req, res) => {
   res.send("Api Is Coming..");
