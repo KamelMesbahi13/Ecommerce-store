@@ -1,10 +1,22 @@
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import Products from "../Products";
+// import Products from "../Products";
 import Rating from "../Components/Rating/Rating";
+import axios from "axios";
 
 const ProductScreen = () => {
+  const [product, setProduct] = useState({});
   const { id: productId } = useParams();
-  const product = Products.find((i) => i._id === productId);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const { data } = await axios.get(
+        `http://localhost:5000/api/products/${productId}`
+      );
+      setProduct(data);
+    };
+    fetchData();
+  }, [productId]);
 
   return (
     <div>
@@ -35,7 +47,7 @@ const ProductScreen = () => {
                   />
                 </div>
                 <div className="mb-4">
-                  <h6 className="italic">Price: {product.price}</h6>
+                  <h6 className="italic">Price: ${product.price}</h6>
                 </div>
                 <div className="md:w-3/4">
                   <p>{product.description}</p>
