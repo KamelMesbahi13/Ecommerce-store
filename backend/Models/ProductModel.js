@@ -1,4 +1,4 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose from "mongoose";
 
 const reviewSchema = mongoose.Schema(
   {
@@ -7,14 +7,17 @@ const reviewSchema = mongoose.Schema(
       required: true,
       ref: "User",
     },
+
     name: {
       type: String,
       required: true,
     },
+
     rating: {
       type: Number,
       required: true,
     },
+
     comment: {
       type: String,
       required: true,
