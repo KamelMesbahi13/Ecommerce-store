@@ -1,6 +1,5 @@
 const products = [
   {
-    _id: "1",
     name: "Airpods Wireless Bluetooth Headphones",
     image: "../public/images/airpods.jpg",
     description:
@@ -14,7 +13,6 @@ const products = [
   },
 
   {
-    _id: "2",
     name: "iPhone 11 Pro 256go Memory",
     image: "../public/images/phone.jpg",
     description:
@@ -28,7 +26,6 @@ const products = [
   },
 
   {
-    _id: "3",
     name: "Cannon EOS 880 DSLR Camera",
     image: "../public/images/camera.jpg",
     description:
@@ -42,7 +39,6 @@ const products = [
   },
 
   {
-    _id: "4",
     name: "Sony Playstation 5 White Edition",
     image: "../public/images/playstation.jpg",
     description:
@@ -56,7 +52,6 @@ const products = [
   },
 
   {
-    _id: "5",
     name: "Logitech G-Series Gaming Mouse",
     image: "../public/images/mouse.jpg",
     description:
@@ -70,7 +65,6 @@ const products = [
   },
 
   {
-    _id: "6",
     name: "Amazon Echo Dot 3rd Generation",
     image: "./images/alexa.jpg",
     description:
