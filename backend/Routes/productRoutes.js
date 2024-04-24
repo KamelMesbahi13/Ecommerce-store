@@ -1,4 +1,5 @@
 import express from "express";
+import products from "../Data/Products.js";
 
 const router = express.Router();
 
