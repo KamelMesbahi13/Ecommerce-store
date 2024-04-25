@@ -19,20 +19,18 @@ const getProducts = asyncHandler(async (req, res) => {
 // ACCESS:   Public
 
 const getProductById = asyncHandler(async (req, res) => {
-  asyncHandler(async (req, res) => {
-    try {
-      const product = await Product.findById(req.params.id);
+  try {
+    const product = await Product.findById(req.params.id);
 
-      if (product) {
-        res.json(product);
-      } else {
-        res.status(404);
-        throw new Error("Resources Not Found");
-      }
-    } catch (error) {
-      res.status(500).json({ message: "Internal Server Error" });
+    if (product) {
+      res.json(product);
+    } else {
+      res.status(404);
+      throw new Error("Resources Not Found");
     }
-  });
+  } catch (error) {
+    res.status(500).json({ message: "Internal Server Error" });
+  }
 });
 
 export { getProducts, getProductById };
