@@ -4,7 +4,6 @@ import Product from "../Models/ProductModel.js";
 // DESCRIPTION:  Fetch All Products
 // ROUTE:   GET /api/products
 // ACCESS:   Public
-
 const getProducts = asyncHandler(async (req, res) => {
   try {
     const products = await Product.find({});
@@ -17,7 +16,6 @@ const getProducts = asyncHandler(async (req, res) => {
 // DESCRIPTION:  Fetch Product By Id
 // ROUTE:   GET /api/product/:id
 // ACCESS:   Public
-
 const getProductById = asyncHandler(async (req, res) => {
   try {
     const product = await Product.findById(req.params.id);
