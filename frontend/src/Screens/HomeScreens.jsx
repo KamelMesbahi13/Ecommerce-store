@@ -1,4 +1,5 @@
 import { useGetProductsQuery } from "../../slices/productApiSlice";
+import Loader from "../Components/Loader/Loader";
 import Product from "../Components/Product/Product";
 
 const HomeScreens = () => {
@@ -8,7 +9,9 @@ const HomeScreens = () => {
     <>
       {isLoading ? (
         <>
-          <h2>Loading..</h2>
+          <div className="textCenter">
+            <Loader />
+          </div>
         </>
       ) : error ? (
         <div>
