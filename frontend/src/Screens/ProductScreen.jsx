@@ -25,9 +25,9 @@ const ProductScreen = () => {
 
             {isLoading ? (
               <>
-                <span>
+                <div className="textCenter">
                   <Loader />
-                </span>
+                </div>
               </>
             ) : error ? (
               <>
