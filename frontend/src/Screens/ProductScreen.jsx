@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import Rating from "../Components/Rating/Rating";
-import { useLazyGetProductDetailsQuery } from "../../slices/productApiSlice";
+import { useGetProductDetailsQuery } from "../../slices/productApiSlice";
 
 const ProductScreen = () => {
   const { id: productId } = useParams();
@@ -9,7 +9,7 @@ const ProductScreen = () => {
     data: product,
     isLoading,
     error,
-  } = useLazyGetProductDetailsQuery(productId);
+  } = useGetProductDetailsQuery(productId);
 
   return (
     <div>
