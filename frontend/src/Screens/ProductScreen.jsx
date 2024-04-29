@@ -1,11 +1,15 @@
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import Rating from "../Components/Rating/Rating";
 import { useGetProductDetailsQuery } from "../../slices/productApiSlice";
 import Loader from "../Components/Loader/Loader";
+import { addToCart } from "../../slices/cartSlice";
+import { useDispatch } from "react-redux";
 
 const ProductScreen = () => {
   const { id: productId } = useParams();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [qty, setQty] = useState(1);
 
@@ -14,6 +18,11 @@ const ProductScreen = () => {
     isLoading,
     error,
   } = useGetProductDetailsQuery(productId);
+
+  const addToCartHandler = () => {
+    dispatch(addToCart({ ...product, qty }));
+    navigate("/cart");
+  };
 
   return (
     <div>
@@ -101,7 +110,10 @@ const ProductScreen = () => {
                   </div>
                   <div className="textCenter">
                     <div className="px-4 py-2 my-8 text-white duration-500 hover:bg-hoverColor bg-mainColor w-fit">
-                      <button disabled={product.countInStock === 0}>
+                      <button
+                        onClick={addToCartHandler}
+                        disabled={product.countInStock === 0}
+                      >
                         Add To Cart
                       </button>
                     </div>
