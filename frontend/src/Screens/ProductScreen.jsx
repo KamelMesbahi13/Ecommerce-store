@@ -75,6 +75,30 @@ const ProductScreen = () => {
                       {product.countInStock > 0 ? "In Stock" : "Out Of Stock"}
                     </h6>
                   </div>
+                  <div>
+                    {product.countInStock > 0 && (
+                      <div className="py-4">
+                        <div className="flex items-center">
+                          <h6 className="mr-4 md:mr-12">Qty:</h6>
+                          <div className="w-40">
+                            <select
+                              value={qty}
+                              onChange={(e) => setQty(Number(e.target.value))}
+                              className="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                            >
+                              {[...Array(product.countInStock).keys()].map(
+                                (x) => (
+                                  <option key={x + 1} value={x + 1}>
+                                    {x + 1}
+                                  </option>
+                                )
+                              )}
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                   <div className="textCenter">
                     <div className="px-4 py-2 my-8 text-white duration-500 hover:bg-hoverColor bg-mainColor w-fit">
                       <button disabled={product.countInStock === 0}>
