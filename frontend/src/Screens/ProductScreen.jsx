@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Rating from "../Components/Rating/Rating";
 import { useGetProductDetailsQuery } from "../../slices/productApiSlice";
@@ -5,6 +6,8 @@ import Loader from "../Components/Loader/Loader";
 
 const ProductScreen = () => {
   const { id: productId } = useParams();
+
+  const [qty, setQty] = useState(1);
 
   const {
     data: product,
@@ -74,7 +77,9 @@ const ProductScreen = () => {
                   </div>
                   <div className="textCenter">
                     <div className="px-4 py-2 my-8 text-white duration-500 hover:bg-hoverColor bg-mainColor w-fit">
-                      <button>Add To Cart</button>
+                      <button disabled={product.countInStock === 0}>
+                        Add To Cart
+                      </button>
                     </div>
                   </div>
                 </div>
